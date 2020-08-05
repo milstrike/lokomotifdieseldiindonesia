@@ -1,0 +1,1266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/detailer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:background="@drawable/rounded_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/detailNamaLokomotif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_25ssp"
+                android:textColor="@color/colorBlack"
+                android:text="Lokomotif Diesel"/>
+
+            <TextView
+                android:id="@+id/detailModelLokomotif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_15ssp"
+                android:text="DI INDONESIA"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iconweb"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:adjustViewBounds="true"
+            android:layout_weight="8"
+            android:src="@drawable/web"
+            android:onClick="gotoOnlineActivity" />
+
+    </LinearLayout>
+
+
+
+        <ScrollView
+            android:id="@+id/detailList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:nestedScrollingEnabled="true"
+            android:scrollbars="none"
+            android:requiresFadingEdge="vertical"
+            android:fadingEdgeLength="48sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:background="@drawable/rounded_bg">
+
+                    <ImageView
+                        android:id="@+id/gambarlokomotif"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/n10" />
+
+                </LinearLayout>
+
+                <!-- DESKRIPSI SINGKAT -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DESKRIPSI SINGKAT"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/colorGrey"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"/>
+
+                    <!-- Deskripsi Singkat -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/detaildeskripsi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <!-- INFORMASI DASAR -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="INFORMASI DASAR"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/colorGrey"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"/>
+
+                    <!-- Sumber Tenaga-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                        <TextView
+                            android:id="@+id/detailsumbertenaga"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+
+                    </LinearLayout>
+                    <!-- Produsen -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Produsen"/>
+
+                        <TextView
+                            android:id="@+id/detailprodusen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Model -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Model"/>
+
+                        <TextView
+                            android:id="@+id/detailmodel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Tanggal Dibuat -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Tanggal Dibuat"/>
+
+                        <TextView
+                            android:id="@+id/detailtanggaldibuat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <!-- SPESIFIKASI RODA -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SPESIFIKASI RODA"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/colorGrey"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"/>
+
+                    <!-- Susunan Roda -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Susunan Roda AAR"/>
+
+                        <TextView
+                            android:id="@+id/detailsusunanroda"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+
+                    </LinearLayout>
+                    <!-- Klasifikasi UIC -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Klasifikasi UIC"/>
+
+                        <TextView
+                            android:id="@+id/detailklasifikasiUIC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- DIMENSI -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DIMENSI"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/colorGrey"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"/>
+
+                    <!-- Lebar Sepur -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Lebar Sepur"/>
+
+                        <TextView
+                            android:id="@+id/detaillebarsepur"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+
+                    </LinearLayout>
+                    <!-- Diameter Roda Penggerak -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Diameter Roda Penggerak"/>
+
+                        <TextView
+                            android:id="@+id/detaildiameterrodapenggerak"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Diameter Roda Idle -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Diameter Roda Idle"/>
+
+                        <TextView
+                            android:id="@+id/detaildiameterrodaidle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Panjang -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Panjang"/>
+
+                        <TextView
+                            android:id="@+id/detailpanjang"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Lebar -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Lebar"/>
+
+                        <TextView
+                            android:id="@+id/detaillebar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Tinggi Maksimum -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Tinggi Maksimum"/>
+
+                        <TextView
+                            android:id="@+id/detailtinggimaksimum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Jarak Antara Alat Perangkai -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Jarak Antara Alat Perangkai"/>
+
+                        <TextView
+                            android:id="@+id/detailjarakantaraalatperangkai"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Jarak Antarpivot -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Jarak antarpivot"/>
+
+                        <TextView
+                            android:id="@+id/detailjarakantarpivot"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Tinggi Alat Perangkai -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Jarak Antara Alat Perangkai"/>
+
+                        <TextView
+                            android:id="@+id/detailtinggiperangkai"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <!-- BERAT -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BERAT"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/colorGrey"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"/>
+
+                    <!-- Berat Kosong -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Berat Kosong"/>
+
+                        <TextView
+                            android:id="@+id/detailberatkosong"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+
+                    </LinearLayout>
+                    <!-- Berat Adhesi -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Berat Adhesi"/>
+
+                        <TextView
+                            android:id="@+id/detailberatadhesi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- BAHAN BAKAR -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BAHAN BAKAR"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/colorGrey"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"/>
+
+                    <!-- Kapasitas Bahan Bakar -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Kapasitas Bahan Bakar"/>
+
+                        <TextView
+                            android:id="@+id/detailkapasitasbahanbakar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+
+                    </LinearLayout>
+                    <!-- Kapasitas Pelumas -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Kapasitas Pelumas"/>
+
+                        <TextView
+                            android:id="@+id/detailkapasitaspelumas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Kapasitas Air Pendingin -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Kapasitas Air Pendingin"/>
+
+                        <TextView
+                            android:id="@+id/detailkapasitasairpendingin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Kapasitas Bak Pasir -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Kapasitas Bak Pasir"/>
+
+                        <TextView
+                            android:id="@+id/detailkapasitasbakpasir"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- SISTEM MESIN -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SISTEM MESIN"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/colorGrey"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"/>
+
+                    <!-- Penggerak Utama -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Penggerak Utama"/>
+
+                        <TextView
+                            android:id="@+id/detailpenggerakutama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+
+                    </LinearLayout>
+                    <!-- Jenis Mesin -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Jenis Mesin"/>
+
+                        <TextView
+                            android:id="@+id/detailjenismesin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Generator -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Generator"/>
+
+                        <TextView
+                            android:id="@+id/detailgenerator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Motor Traksi -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Motor Traksi"/>
+
+                        <TextView
+                            android:id="@+id/detailmotortraksi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Tipe Motor Traksi -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Tipe Motor Traksi"/>
+
+                        <TextView
+                            android:id="@+id/detailtipemotortraksi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- KINERJA -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="KINERJA"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/colorGrey"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"/>
+
+                    <!-- Kecepatan Maksimum -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Kecepatan Maksimum"/>
+
+                        <TextView
+                            android:id="@+id/detailkecepatanmaksimum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+
+                    </LinearLayout>
+                    <!-- Daya Mesin -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Daya Mesin"/>
+
+                        <TextView
+                            android:id="@+id/detaildayamesin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Daya Ke Generator Converter -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Daya Ke Generator / Converter"/>
+
+                        <TextView
+                            android:id="@+id/detaildayakegeneratorconverter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Jari Jari Lengkung Terkecil -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Jari - jari Lengkung Terkecil"/>
+
+                        <TextView
+                            android:id="@+id/detailjarijarilengkungterkecil"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- KARIER -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="KARIER"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/colorGrey"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"/>
+
+                    <!-- Daerah Operasi -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Daerah Operasi"/>
+
+                        <TextView
+                            android:id="@+id/detaildaerahoperasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+
+                    </LinearLayout>
+                    <!-- Mulai Dinas -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Mulai Dinas"/>
+
+                        <TextView
+                            android:id="@+id/detailmulaidinas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+                    <!-- Keadaan -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Keadaan Terakhir"/>
+
+                        <TextView
+                            android:id="@+id/detailkeadaan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Sumber Tenaga"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/petunjukswipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack90">
+
+        <LinearLayout
+            android:id="@+id/guidanceswiping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_12ssp"
+                android:layout_gravity="center_vertical"
+                android:text="Swipe ke kanan untuk kembali   "/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_back_symbol_second"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:layout_below="@id/guidanceswiping"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:onClick="confirmGuidanceCancelation"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
